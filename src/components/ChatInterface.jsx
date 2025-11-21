@@ -1,7 +1,9 @@
 import React from "react";
 import Sidebar from "./Sidebar";
-import { PanelRightOpen, Sun } from "lucide-react";
+import { PanelRightOpen, Fan, Sun } from "lucide-react";
 import VidhurAILogo from "./VidhurAILogo";
+import MessageList from "./MessageList";
+import MessageInput from "./MessageInput";
 
 const ChatInterface = () => {
   return (
@@ -21,7 +23,8 @@ const ChatInterface = () => {
             </button>
 
             {/* Vidhur AI Logo */}
-            <VidhurAILogo className="w-8 h-8" />
+            {/* <VidhurAILogo className="w-8 h-8" /> */}
+            <Fan className="w-8 h-8 text-cyan-600" />
 
             {/* Vidhur AI Title  */}
             <h1 className={`text-lg font-semibold text-white`}>Vidhur AI</h1>
@@ -33,6 +36,10 @@ const ChatInterface = () => {
             <Sun className="w-f h-5 text-gray-300" />
           </button>
         </div>
+
+        <MessageList />
+
+        <MessageInput />
       </div>
     </div>
   );
